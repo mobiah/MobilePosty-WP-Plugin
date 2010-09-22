@@ -1,0 +1,103 @@
+/*
+*	white-black.css
+*/
+* {margin:0;padding:0;border:0}
+body{
+	color: #333333;
+	background: #FFF;
+	margin:0;
+	text-align:center;
+}
+a {
+	color:#000;
+	text-decoration:none;
+}
+a:hover {
+	color:#AAA;
+	text-decoration:underline;
+}
+h1 {
+	display:block;
+	font-size:150%;
+	line-height:18px;
+	margin-bottom: 10px;
+}
+h2 {
+	margin:10px 0 20px;
+	font-size:120%;
+	letter-spacing:1px;
+	font-weight:500;
+}
+h3 {
+	margin:10px 0 5px;
+	font-size:110%;
+	letter-spacing:2px;
+	font-weight:600;
+}
+h2, h3 {
+	color:#000;
+	text-transform:uppercase;
+}
+p {
+	margin:0px 0px 10px;
+}
+blockquote {
+	margin:5px;
+	color:#aaa;
+	font-size:105%;
+	font-style:italic;
+}
+#header {
+	background: none repeat scroll center center #FFF;
+	padding: 10px;
+	position: relative;
+	border-top: 3px solid #000;
+	border-bottom: 3px solid #000;
+}
+.body-wrap {
+	height: auto;
+	display:block;
+	text-align: left;
+	padding: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#content {
+	padding-right: 10%;
+	width: auto;
+}
+.menu {
+	background: #777;
+}
+.menu li {
+	text-align:left;
+	display:block;
+	line-height:30px;
+	height:30px;
+	text-decoration:none;
+	padding-left:30px;	
+	overflow: hidden;
+	background: url(white-black-buttons.gif) repeat-x;
+}
+.menu li:hover {
+	background: url(white-black-buttons_r.gif) repeat-x;
+}
+.menu li a {
+	color: #FFF;
+	font-weight: 550;
+}
+.menu li a:hover {
+	color: #AAA;
+	text-decoration: underline;
+}
+
+#momo_footer {
+	border-top:3px solid #000;
+	width:100%;
+	font-size:80%;
+	font-weight:normal;
+	padding: 10px 0;
+	text-align:center;
+	clear:both;
+	margin: 5px 0;
+}

@@ -1,0 +1,114 @@
+/*
+*	white-black.css
+*/
+* {margin:0;padding:0;border:0}
+body{
+	color: #444444;
+	background: url("blue-black-bg.jpg");
+	margin:0;
+	text-align:center;
+	word-spacing:2px;
+}
+a {
+	color:#001A2A;
+	font-weight: normal;
+}
+a:hover {
+}
+h1 {
+	
+	display:block;
+	font-size:150%;
+	line-height:18px;
+	letter-spacing: 3px;
+	margin-bottom: 10px;
+}
+h2 {
+	color: #1E475B;
+	margin:10px 0 20px;
+	font-size:120%;
+	letter-spacing:1px;
+	font-weight:500;
+}
+h3 {
+	margin:10px 0 5px;
+	font-size:110%;
+	letter-spacing:2px;
+	font-weight:600;
+}
+h1, h2, h3 {
+	text-transform:uppercase;
+}
+p {
+	margin:0px 0px 10px;
+}
+blockquote {
+	margin:5px;
+	color:#aaa;
+	font-size:105%;
+	font-style:italic;
+}
+#header {
+	padding: 10px;
+	position: relative;
+	border-bottom: 5px solid #000;
+}
+#header h1, #header a {
+	color: #FFF;
+	margin: 0;
+}
+.body-wrap {
+	background: #EEE;
+	height: auto;
+	display:block;
+	text-align: left;
+	padding: 15px;
+	margin-left: 3px;
+	margin-right: auto;
+}
+#content {
+	padding-right: 10%;
+	width: auto;
+}
+.menu {
+	background: #777;
+	padding: 0;
+}
+.menu li {
+	text-align:left;
+	display:block;
+	line-height:35px;
+	height:35px;
+	text-decoration:none;
+	padding-left:30px;	
+	overflow: hidden;
+	background:url("blue-black-menu.jpg") repeat-x scroll center top #000000;
+}
+.menu li:hover {
+	background:url("blue-black-menu-hover.jpg") repeat-x scroll center top #000000;
+}
+.menu li:hover a {
+	color: #AAA;
+	text-decoration: underline;
+}
+.menu li a {
+	color: #FFF;
+	font-weight: 550;
+}
+ul { 
+	padding-left : 5px;
+} 
+
+#momo_footer {
+	color: #FFF;
+	border-top:5px solid #000;
+	width:100%;
+	font-size:80%;
+	font-weight:normal;
+	padding: 10px 0;
+	text-align:center;
+	clear:both;
+}
+#momo_footer a {
+	color: #FFF;
+}

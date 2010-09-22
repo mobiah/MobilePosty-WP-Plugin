@@ -1,0 +1,117 @@
+/*
+*	orange-blue.css
+*/
+body {
+	background:#FFF;
+	color: #666666;
+	margin:0;
+	text-align:center;
+	font-size: 14px;
+	width:100%;
+	height:100%;
+}
+a {
+	color:#3AA0B9; 
+}
+a:hover {
+	color:#5AAA11;
+	text-decoration:none;
+}
+h1, h2, h3 {
+	color:#E75C14;
+}
+h1 {
+	display:block;
+	font-weight:bold;
+	margin-bottom:10px;
+	letter-spacing : 3px;
+	font-size: 150%;
+}
+h2 {
+	margin:10px 0 10px;
+	letter-spacing:1px;
+	font-size: 120%;
+}
+h3 {
+	margin:10px 0 5px;
+	letter-spacing:1px;
+	font-size: 110%;
+}
+p {
+	margin:0px 0px 10px;
+}
+#header {
+	background:#E75C14;
+	padding: 10px;
+	position: relative;
+}
+#header a {
+	color:#FFF;
+}
+#header h1 {
+	color: #FFF;
+	margin-bottom:0px;
+}
+.body-wrap {
+	border:1px solid #E75C14;
+	height: auto;
+	display:block;
+	text-align: left;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	margin: 1px;
+}
+#content {
+	padding-right: 10%;
+	width: auto;
+}
+
+.menu {
+	background: #FFF;
+}
+.menu li {
+	color: #7ACE11;
+	background:url("orange-blue-arrow.gif") no-repeat 15px 50%;
+	border-bottom:1px dotted #CCCCCC;
+	text-align:left;
+	display:block;
+	line-height:30px;
+	height:30px;
+	text-decoration:none;
+	padding-left:25px;	
+	overflow: hidden;
+}
+.menu li:first-child {
+	border-top:1px dotted #CCCCCC;
+}
+.menu li:hover {
+	text-decoration : none;
+}
+.menu li:hover a {
+	color:#E75C14;
+}
+.menu li a {
+	color: #3AA0B9;
+	font-weight: bold;
+}
+
+#momo_footer {
+	background : transparent;
+	width:100%;
+	font-size : 80%;
+	font-weight:normal;
+	padding : 5px 0;
+	text-align:center;
+	clear:both;
+	height : 50px;
+}
+#momo_footer a {
+	color: #3AA0B9;
+}
+
+ul { 
+	list-style : none;
+	margin : 0;
+	padding : 0;
+} 

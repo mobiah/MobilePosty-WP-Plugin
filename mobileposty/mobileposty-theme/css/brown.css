@@ -1,0 +1,113 @@
+/*
+*	brown.css
+*/
+* {margin:0;padding:0;border:0}
+body {
+	color: #FCFAE6;
+	background: #7A674C;
+	margin:0;
+	text-align:center;
+}
+a {
+	color: #F6E48A; 
+	text-decoration:none;
+	background-color: inherit;
+}
+a:hover {
+	color: #FFFFFF;
+	text-decoration:none;
+}
+a:visited {
+	color: #F6E48A;
+}
+h1,h2,h3 {
+	color: #FFFFC6;
+}
+h1 {
+	display:block;
+	font-size:120%;
+	line-height:18px;
+	margin-bottom: 10px;
+}
+h2 {
+	text-transform:uppercase;
+}
+h3 {
+}
+p {
+	margin:0px 0px 10px;
+}
+blockquote {
+	margin:5px;
+	color:#aaa;
+	font-size:105%;
+	font-style:italic;
+}
+#header {
+	background:none repeat scroll 0 0 #490102;
+	padding: 10px;
+	position: relative;
+}
+#header h1 , #header a {
+	color: #FFF;
+	font-weight: bold;
+	font-size: 20px;
+	margin: 0;
+}
+.body-wrap {
+	height: auto;
+	display:block;
+	text-align: left;
+	padding: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#content {
+	padding-right: 10%;
+	width: auto;
+}
+.menu {
+	margin: 0px;
+}
+.menu li {
+	text-align:left;
+	display:block;
+	line-height:40px;
+	height:40px;
+	text-decoration:none;
+	padding-left:30px;	
+	overflow: hidden;
+	border-left: 5px solid  transparent;
+	border-bottom: 1px dotted #CCC;
+	background-color: #6F5E45;
+}
+.menu li:first-child{
+	border-top: 1px dotted #CCC;
+}
+.menu li:hover {
+	border-left: 5px solid  #FFFFC6;
+}
+.menu li:hover a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+.menu li a {
+	text-decoration: none;
+}
+img {
+	border: none;
+}
+ul {
+	margin-left: 15px;
+}
+#momo_footer {
+	background: #6F5E45 url('brown-footer.jpg') repeat-x left top;
+	width:100%;
+	font-size:80%;
+	font-weight:normal;
+	padding: 10px 0;
+	text-align:center;
+	clear:both;
+	height: 40px;
+}
+

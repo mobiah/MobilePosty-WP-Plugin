@@ -1,0 +1,254 @@
+/**	Mobiah Mobilesite CSS for admin pages **/
+
+/* -------- Mobile Content Page -------- */
+
+#momo_contentContainer {	
+	width: 1010px;	
+	float: left;
+}
+#momo_contentLeft {	
+	float: left;	
+	width: 600px;
+}
+#momo_contentRight {	
+	float: left;	
+	width: 410px;
+}
+#momo_actionButtons {	
+	text-align: center;
+}
+#momo_previewer {	
+	background: transparent url('../images/momo-phone-preview.png') no-repeat left top;	
+	height: 738px;	
+	margin: 5px 0 5px 10px;
+}
+
+#momo_enabledDiv {	
+	width: 400px;	
+	padding: 1px 0 0 0;
+}
+.momo_messageContainer {
+	height: 20px;
+}
+#momo_contentMessage {	
+}
+.momo_message {
+	padding: 0 0 0 5px;
+	background-color: #FFFFE0;	
+	border: 1px solid #E6DB55;	
+	-moz-border-radius: 3px;	
+	-webkit-border-radius: 3px;	
+	border-radius: 3px;
+}
+.momo_error_message {
+	background-color: #F0C0C5;
+	border: 1px solid #F72A0F;
+}
+#momo_enabledMessage {
+
+}
+#momo_tabContainer {	
+	clear: both;
+}
+#momo_tabs {	
+	padding: 0 0 0 10px;	
+	margin: 10px 0px 4px 0px;
+}
+#momo_tabs li {	
+	border: 1px solid #DFDFDF;	
+	display: inline;	
+	list-style-type: none;	
+	margin: 0 1px;	
+	padding: 5px;	
+	background: none;	
+	/* firefox corners */	
+	-moz-border-radius-topleft: 4px;	
+	-moz-border-radius-topright: 4px;	
+	/* safari corners */	
+	-webkit-border-top-left-radius 4px;	
+	-webkit-border-top-right-radius 4px;	
+	/* chrome corners */	
+	border-top-left-radius: 4px;	
+	border-top-right-radius: 4px;
+}
+#momo_tabs li.selected {	
+	font-size:11px;	
+	font-weight:bold;	
+	background:url("../../../../wp-admin/images/gray-grad.png") repeat-x scroll left top #DFDFDF;
+}
+#momo_contentContainer {
+	/*	margin:-1px 0 0; */
+}
+#momo_contentContainer th.momo_TableTitle {	
+	border-bottom: 1px solid;
+}
+#momo_contentContainer td.momo_checkbox {	
+	text-align: center;
+}
+#momo_contentContainer span {	
+	font-size: 10px;	
+	font-style: normal;	
+	color: #000;
+}
+#momo_contentContainer .momo_invisible {	
+	font-style: italic;	
+	color: #777;	
+	background-color: #F9F9F9;
+}
+
+/* -------- Mobile Settings Page -------- */
+#momo_optionsContainer {
+	width: 900px;	
+	float: left;
+}
+#momo_optionsLeft {	
+	float: left;	
+	width: 474px;
+}
+#momo_optionsRight {	
+	float: left;	
+	width: 410px;
+}
+#momo_logoUploadButtons {
+	float: left;
+	margin-right: 20px;
+}
+#momo_styleList li {
+	border: 1px solid #DFDFDF;	
+	display: inline-block;	
+	list-style-type: none;
+	padding: 3px;
+	text-align: center:
+	/* firefox corners */	
+	-moz-border-radius: 4px;
+	/* safari corners */
+	-webkit-border-radius 4px;
+	/* chrome corners */
+	border-radius: 4px;
+}
+.momo_stylePreviewImg {
+	width: 120px;
+	height: 140px;
+}
+
+#momo_envTest {
+	margin-bottom: 10px;
+}
+.momo_tests {
+    width:600px;
+    float:left;
+}
+.momo_tests dt {
+    font-weight:bold;
+    display:block;
+    float:left;
+    width:200px;
+    margin:0 10px 4px 0;
+}
+.momo_tests dd {
+    float:left;
+    margin:0 0 4px 0;
+    padding:0 0 0 20px;
+    background:transparent url(../images/icon_error.png) center left no-repeat;
+}
+.momo_tests dd.momo_pass {
+    background:transparent url(../images/icon_success.png) center left no-repeat;
+}
+.momo_success {
+    clear:both;
+}
+
+/* -------- mobile preview settings -------- */
+#momo_previewLoading {
+	position: relative;	
+	left: 42px;	
+	top: 126px;	
+}
+#momo_previewWindow {	
+	width: 320px;	
+	height: 480px;	
+	position: relative;	
+	left: 42px;	
+	top: 126px;	
+	background: #FFF;
+	overflow: hidden;
+	font-family: Helvetica;
+}
+.momo_previewH1 {
+	text-align: center;
+	font-family: Helvetica;
+	font-size: 22px;
+}
+.momo_previewH1 a {
+	text-decoration: none;
+	border: 1px solid #CCC;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-top: 6px;
+	padding: 7px;
+	background-color: #888;
+	color: #FFF;
+}
+.momo_previewH1 a:hover{
+	color: #555;
+}
+
+.momo_previewH2 {
+	font-family: Helvetica;
+}
+ul.momo_previewNav {
+	border: 1px solid #CCC;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-top: 6px;
+	background-color: #888;
+}
+ul.momo_previewNav li {
+	overflow: ellipsis;
+	border-bottom: 1px solid #FFF;
+	margin: 0px;
+	padding: 7px;
+}
+ul.momo_previewNav li:last-child {
+	border-bottom: 0px none;
+}
+ul.momo_previewNav li a {
+	color: #FFF;
+	text-decoration: none;	
+	font-weight: bold;
+	padding: 5px 10px;
+	font-size: 14px;
+
+}
+#momo_previewIFrame {
+	width: 320px;
+	height: 480px;
+}
+
+/* -------- PAGES AND POSTS SINGLE EDIT PAGES -------- */
+div.momo_excluded { 	
+	font-size: 11px; 
+}
+#momo_page_box div.inner {  	
+	padding: inherit; 	
+	background-color: transparent; 	
+	border: none; 
+}
+#momo_page_box div.inner label { 	
+	background-color: none; 
+}
+table.momo_visTable {	
+	width: 100%;	
+	border: 1px solid;
+}
+table.momo_visTable th {	
+	border: 1px solid;	
+	background-color: #CCC;
+}
+table.momo_visTable tr.even {	
+	background-color: #DDD;
+}
+div.ancestor_alert {	
+	padding-top: 2px;	
+	line-height: 13px;
+}
