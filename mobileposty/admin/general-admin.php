@@ -1,6 +1,6 @@
 <?php
 /*
-*	Functions needed around the plugin
+*	Functions needed around the admin area of the plugin
 *
 *
 */

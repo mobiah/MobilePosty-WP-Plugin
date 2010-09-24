@@ -1,6 +1,6 @@
 <?php
 /*
-*	Special functions for when the site is being PREVIEWED from the back end in the mobile theme,
+*	Special functions for when the site is being PREVIEWED from the back end in the mobile theme options,
 *	not being viewed from a mobile device or browser.
 */
 

@@ -8,6 +8,7 @@
 
 /*
 *	creates an array of ALL the page IDs in the system, and who their parent id is.
+*	each existing pageid is a key in the array, and the value is the parent page ID if any
 *	useful for testing visibility within the heirarchy (both in PHP and javascript)
 */
 function momo_makePageParents() {

@@ -2,6 +2,7 @@
 /*	
 *	-----------------------------------------------------------
 *	POST FUNCTIONS
+*	Generate all global variables which help mobileposty manage content, both in the backend and frontend.
 *	-----------------------------------------------------------
 */
 
@@ -129,6 +130,7 @@ function momo_getPostCats($postID, $getAncestors = false) {
 
 /*	
 *	Finds an invisible (excluded) category which contains a given post ID
+*	useful for when you want to know which category is preventing the visibility of a given post.
 */
 function momo_getInvisPostCat($postID) {
 	$invisCat = NULL;

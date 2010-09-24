@@ -6,6 +6,9 @@
 *
 */
 
+/*
+*	only add the 
+*/
 function momo_themeSwitcherInit() {
 	global $momo_enabled;
 	if ( $momo_enabled ) {
@@ -18,7 +21,8 @@ add_filter('stylesheet', 'momo_stylesheetSwitcher');
 
 
 /*
-*	This function decides if we should show a mobile theme or not
+*	this function, if we have decided that we should show the mobile theme, outputs the name of the mobile theme
+*	otherwise, it just returns the currently selected template.
 */
 function momo_themeSwitcher ( $currentTemplate ) {
 	global $momo_isMobile;
@@ -31,8 +35,8 @@ function momo_themeSwitcher ( $currentTemplate ) {
 }
 
 /*
-*	This function decides if we should show a mobile stylesheet or not
-*	( Until there appears to be a contradictory reason, stylesheet and template are the same.
+*	this function, if we have decided that we should show the mobile theme, outputs the name of the mobile stylesheet
+*	( Until there appears to be a contradictory reason, stylesheet and template are the same ).
 */
 function momo_stylesheetSwitcher ( $currentStylesheet ) {
 	global $momo_isMobile;
@@ -46,7 +50,7 @@ function momo_stylesheetSwitcher ( $currentStylesheet ) {
 
 /*
 *	Add a link to the footer of pages to allow the user to switch between mobile and regular theme
-*
+*	But not always.  There is some logic to it.
 */
 function momo_switcherLink() {
 	global $momo_isMobile, $momo_showSwitcherLink;
@@ -86,6 +90,7 @@ function momo_switcherLink() {
 	</span>
 <?php
 } // end momo_switcherLink
+
 
 /*
 *	Tests the environment for variables which indicate which page to show

@@ -6,7 +6,8 @@
  * 	1.  adding a checkbox under the category description
  *	2.	adding a column in the list view of categories, indicating the viewable status
  *  2a. allows bulk-save of visibility in the list view of categories
- *
+ *	
+ *	UPDATE:  2 and 2a only work for wordpress versions less than 3.0
 */
 
 

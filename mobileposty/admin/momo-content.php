@@ -6,7 +6,9 @@
 *
 */
 
-
+/*
+*	this function is used in admin/general-admin.php in the menu declarations.
+*/
 function momo_contentDisplay() {
 	global $momo_options, $momo_envTest, $momo_visibleCats, $momo_visiblePages, $momo_visiblePosts;
 		

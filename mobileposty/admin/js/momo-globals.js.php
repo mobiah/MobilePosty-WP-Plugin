@@ -1,4 +1,11 @@
 <?php
+/*
+*	this file outputs the important heirarchy data about posts/pages/cats in JSON format,
+*	so that the javascript portions of the plugin can do their duties with the same info
+*	that the php portions do.
+*	
+*/
+
 global $momo_visibleCats;
 global $momo_visiblePages;
 global $momo_visiblePosts;

@@ -1,11 +1,11 @@
 <?php
+/*
+*	Admin-area filters for pages.  As of yet, this just adds a box to the new/edit page screen, for setting visibility.
+*/ 
 
-// all the filters/actions/etc.. which only need to happen when loading an admin page
 function momo_pagesAdminInit() {
 	// add the meta box for the page edit view
 	add_meta_box('momo_page_box', __('Mobile Settings'), 'momo_page_metabox', 'page', 'side', 'low');
-
-
 }
 add_action( 'admin_init', 'momo_pagesAdminInit' );
 
@@ -65,7 +65,7 @@ function momo_page_metabox() {
 	</script>
 <?php
 }
-//add_action('submitpage_box', 'momo_page_metabox');
+
 
 
 ?>

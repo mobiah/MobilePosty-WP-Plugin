@@ -16,7 +16,7 @@ $mainFile = $backtrace[0]['file'];
 register_activation_hook( $mainFile, 'momo_addReporting' );
 register_deactivation_hook( $mainFile, 'momo_removeReporting');
 /*
-*	Makes sure that there is an event which does the home-calling
+*	Makes sure that there is a wordpress action (to which the home-calling functions are added)
 *	This function can be called at activation, and potentially on every page load
 *	to make sure it's there.
 */
@@ -31,7 +31,7 @@ function momo_removeReporting() {
 }
 // this call makes the momo_addReporting get called as soon as all plugins are loaded.
 // this happens on every page load.  if that's undesirable (as it already is supposed to get
-// added on plugin activation, then delete this line.
+// added on plugin activation), then delete this line.
 add_action( 'plugins_loaded', 'momo_addReporting');
 
 

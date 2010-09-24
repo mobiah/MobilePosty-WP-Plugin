@@ -1,5 +1,7 @@
 <?php
-
+/*
+*	These functions are useful when the browser is making a non text/html request (i.e. - not a "page" request, but something else)
+*/
 
 // this function outputs javascript headers, and prevents wordpress from doing anything else
 // the result of this is that a plain javascript file can be loaded inside wp-admin

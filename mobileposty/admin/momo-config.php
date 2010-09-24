@@ -3,7 +3,7 @@
 /*
 *	Let it be known: Here lies the main configuration page.
 *
-*
+*	this function is used in admin/general-admin.php in the menu page declarations.
 */
 
 function momo_configDisplay() {

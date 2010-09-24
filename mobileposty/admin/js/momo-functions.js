@@ -1,5 +1,5 @@
 /*
-*	Mobiah-mobilesite functions
+*	mobileposty functions
 *
 */
 
@@ -40,7 +40,7 @@ function momo_pageSetVisible(pageID) {
 
 
 /*
-*	Check the cat heirarchy to see if this post is in any invisible cateogories
+*	Check the cat heirarchy to see if this post is in any invisible categories
 *	returns the first invisible category (or ancestor) or null, just like the PHP function
 */
 function momo_getInvisPostCat(postID) {
@@ -127,7 +127,7 @@ function momo_catVisible(catID) {
 *
 */
 
-// on edit-page.php
+// on wp-admin/edit-page.php
 // test a parent for visibility, and show a notification if there's an invisible ancestor
 function momo_testPageParent( eventObj ){
 	// which parent have they selected?
@@ -328,16 +328,18 @@ function momo_clickPostVisBox( eventObj ) {
 
 
 // on the main admin/config page
-// add momo_invisible class to pages who won't be visible
+// add momo_invisible css class to pages who won't be visible
 function momo_markInvisPages() {
 	jQuery('div#momo_pagesTable tr').each( function () {
-		// if this isn't a row associated with a Page, do nothing
+		// if this isn't a row associated with a Page, do nothing - this shouldn't happen.
 		if ( this.id.indexOf('page') == -1 ) {
 			return;
 		}
 		// get the pageID
 		var pageID = this.id.replace('page','').replace('Row','');
+		// does it have an invisible ancestor? or is the page itself invisible?
 		var invisAncestorID = momo_getInvisPageAncestor(pageID);
+		// if so, add the invisible css class.
 		if ( invisAncestorID != null ) {
 			jQuery(this).addClass('momo_invisible');
 		} else {
@@ -347,7 +349,7 @@ function momo_markInvisPages() {
 }
 
 // on the main admin/config page
-// add momo_invisible class to posts who won't be visible
+// add momo_invisible css class to posts who won't be visible
 function momo_markInvisPosts() {
 	jQuery('div#momo_postsTable tr').each( function () {
 		// if this isn't a row associated with a Page, do nothing
@@ -364,7 +366,7 @@ function momo_markInvisPosts() {
 }
 
 // on the main admin/config page
-// add momo_invisible class to Cat rows who won't be visible
+// add momo_invisible css class to Cat rows who won't be visible
 function momo_markInvisCats() {
 	// go through all of the categories
 	jQuery('div#momo_catsTable tr').each( function () {
@@ -378,10 +380,12 @@ function momo_markInvisCats() {
 			jQuery(this).addClass('momo_invisible');
 			// also mark the category names in the posts table!
 			jQuery('span#cat'+catID).addClass('momo_invisible');
+// if you want to completely DISABLE the checkboxes of invisible cats... uncomment the following line.
 //			jQuery(this.id + ' input[type=checkbox] ').attr('disabled', true);
 		} else {
 			jQuery(this).removeClass('momo_invisible');
 			jQuery('span#cat'+catID).removeClass('momo_invisible');
+// but don't forget to uncomment this line if uncommenting the above line.
 //			jQuery(this.id + ' input[type=checkbox] ').attr('disabled', false);
 		}
 		
@@ -564,6 +568,7 @@ function momo_getMediaImage( targetFieldID, targetImgID ) {
 	}
 }
 
+// set the field containing the url of the header image to blank, and also the preview URL to blank
 function momo_removeHeaderImage( targetFieldID, targetImgID, blankImgURL ) {
 	jQuery( '#'+targetFieldID ).val('');
 	jQuery( '#'+targetImgID ).attr('src',blankImgURL);

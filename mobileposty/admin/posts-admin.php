@@ -1,11 +1,11 @@
 <?php
+/*
+*	Admin-area filters for posts.  As of yet, this just adds a box to the new/edit post screen, for setting visibility.
+*/ 
 
-// all the filters/actions/etc.. which only need to happen when loading an admin page
 function momo_postsAdminInit() {
 	// add the meta box for the post edit view
 	add_meta_box('momo_post_box', __('Mobile Settings'), 'momo_post_metabox', 'post', 'side', 'low');
-
-
 }
 add_action( 'admin_init', 'momo_postsAdminInit' );
 

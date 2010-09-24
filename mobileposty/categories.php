@@ -6,7 +6,7 @@
 */
 
 /*
-*	creates an array of ALL the page IDs in the system, and who their parent id is.
+*	creates an array of ALL the category IDs in the system, and who their parent id is.
 *	useful for testing visibility within the heirarchy (both in PHP and javascript)
 */
 function momo_makeCatParents() {
@@ -103,7 +103,7 @@ function momo_getCatDescendants($catID) {
 */
 function momo_catsOrderByParent( $catArray, $parent = '0', $depth = 0 ) {
 	if ( !is_array($catArray) ) {
-		return array(); // why was this called?
+		return array(); // we should never get here...
 	}
 	$newArray = array();
 	foreach ( $catArray as $catObj ) {
