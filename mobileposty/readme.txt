@@ -1,12 +1,12 @@
-=== MobilePosty ===
+=== MobilePosty Mobile Site Generator ===
 
-Contributors: Mobiah, houjenming
-Tags: mobile, customizable, mobile theme, content, mobile web, mobile browser, mobiah
+Contributors: Mobiah
+Tags: mobile, customizable, mobile theme, content, mobile web, mobile browser, mobiah, iphone, android, blackberry
 Requires at least: 2.7
 Tested up to: 3.0.1
 Stable tag: 0.6
 
-MobilePosty lets you re-organize and redesign your existing content into a custom site optimized for mobile browsers.
+MobilePosty let's you re-organize and redesign your existing content very quickly into a custom site optimized for mobile browsers.
 
 MobilePosty: A smaller screen, a bigger opportunity.
 
@@ -14,7 +14,7 @@ MobilePosty: A smaller screen, a bigger opportunity.
 
 By now, we're all hip to the idea that someone visiting your site from a mobile browser is probably looking for something very different than someone visiting your site from a static connection. Mobile users are by and large looking for one bit of information--contact info, directions, opening hours, etc. They are after something discreet and specific, and they want it displayed in a very attractive way, optimized for a small screen.
 
-That's what MobilePosty does. You can select from your existing content what you would like highlighted for mobile users, and you can apply one of our mobile themes so that it is visually optimized as well.
+That's what MobilePosty does. You can select from your existing content what you would like highlighted for Iphone, Android, Blackberry and other mobile users, and you can apply one of our mobile themes so that it is visually optimized as well.
 
 Our content selection interface gives you complete control over your content and how it displays to mobile users. It gives options to assign homepage status to a different page than your full site. It also allows you to customize display settings for image size, author/date information, and any specific category, page, or post.
 
@@ -53,7 +53,7 @@ Version 0.6 is the first full version to be released.
 
 == Changelog ==
 
-0.6: 
+0.6: Dec 6, 2010 
 
 Initial release
 

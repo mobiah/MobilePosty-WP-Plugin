@@ -23,7 +23,7 @@ register_deactivation_hook( $mainFile, 'momo_removeReporting');
 function momo_addReporting() {
 	// If there is no next scheduled reporting time, then stick it in the schedule (daily)
 	if ( !wp_next_scheduled(MOMO_REPORTING_ACTION) ) {
-		wp_schedule_event( time(), 'daily', MOMO_REPORTING_ACTION ); // hourly, daily and twicedaily
+		wp_schedule_event( time(), MOMO_REPORTING_FREQ, MOMO_REPORTING_ACTION ); // hourly, daily and twicedaily
 	} 
 }
 function momo_removeReporting() {
@@ -47,15 +47,18 @@ function momo_themeInstall() {
 
 	$wpThemeDir = get_theme_root();
 	$permissions = fileperms($wpThemeDir);
+	if(DEBUG) { error_log("momo_themeInstall wpThemeDir=$wpThemeDir : perms=$permissions"); }
 
 	// the location of the mobile theme within the plugin files
 	$copyFrom = MOMO_PATH."/mobileposty-theme";
 	// where to put the theme files
 	$copyTo = $wpThemeDir.'/'.MOMO_DEFAULT_MOBILE_THEME;
+	if(DEBUG) { error_log("momo_themeInstall copyFrom=$copyFrom copyTo=$copyTo"); }
 	
 	// only create the folder and subfolders of the theme folder if the main theme folder isn't there at all.
 	if ( !is_dir( $wpThemeDir.'/'.MOMO_DEFAULT_MOBILE_THEME ) ) {
-		momo_smartCopy($copyFrom,$copyTo);
+		$res = momo_smartCopy($copyFrom,$copyTo);
+		if(DEBUG) { error_log("momo_themeInstall res=$res"); }
 	}	
 }
 
@@ -65,6 +68,7 @@ function momo_themeInstall() {
 function momo_smartCopy($source, $dest, $options=array('folderPermission'=>0775,'filePermission'=>0775))
 {
 	$result=false;
+	//if(DEBUG) { error_log("momo_smartCopy source=$source dest=$dest"); }
    
 	if (is_file($source)) {
 		if ($dest[strlen($dest)-1]=='/') {
@@ -79,28 +83,34 @@ function momo_smartCopy($source, $dest, $options=array('folderPermission'=>0775,
 		chmod($__dest,$options['filePermission']);
 	   
 	} elseif(is_dir($source)) {
+		$tmp = $dest[strlen($dest)-1];
+		//if(DEBUG) { error_log("momo_smartCopy is_dir source=$source tmp=$tmp"); }
 		if ($dest[strlen($dest)-1]=='/') {
 			if ($source[strlen($source)-1]=='/') {
 				//Copy only contents
 			} else {
 				//Change parent itself and its contents
 				$dest=$dest.basename($source);
-				@mkdir($dest);
+				//@mkdir($dest);
+				mkdir($dest);
 				chmod($dest,$options['filePermission']);
 			}
 		} else {
 			if ($source[strlen($source)-1]=='/') {
 				//Copy parent directory with new name and all its content
-				@mkdir($dest,$options['folderPermission']);
+				//@mkdir($dest,$options['folderPermission']);
+				mkdir($dest,$options['folderPermission']);
 				chmod($dest,$options['filePermission']);
 			} else {
 				//Copy parent directory with new name and all its content
-				@mkdir($dest,$options['folderPermission']);
+				//@mkdir($dest,$options['folderPermission']);
+				mkdir($dest,$options['folderPermission']);
 				chmod($dest,$options['filePermission']);
 			}
 		}
 
 		$dirHandle=opendir($source);
+		//if(DEBUG) { error_log("momo_smartCopy dirHandle=$dirHandle"); }
 		while($file=readdir($dirHandle))
 		{
 			if($file!="." && $file!="..")
@@ -111,7 +121,7 @@ function momo_smartCopy($source, $dest, $options=array('folderPermission'=>0775,
 					$__dest=$dest."/".$file;
 				}
 				//echo "$source/$file ||| $__dest<br />";
-				$result=smartCopy($source."/".$file, $__dest, $options);
+				$result=momo_smartCopy($source."/".$file, $__dest, $options);
 			}
 		}
 		closedir($dirHandle);

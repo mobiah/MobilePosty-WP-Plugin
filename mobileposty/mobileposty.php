@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: MobilePosty
+Plugin Name: MobilePosty Mobile Site Generator
 Plugin URI: http://www.mobiah.com/
 Description: Allows wordpress to have a mobile site whose content is a subset of the full site, allowing admins to choose which pages/posts/categories are to show up on the mobile site.  <br /> The mobile site should also resemble a native mobile app.
-Version: 0.2
+Version: 0.6
 Author: Mobiah 
 */
 
@@ -15,6 +15,7 @@ Author: Mobiah
 *
 */
 
+define('DEBUG', true);
 define("MOMO_PLUGIN_FILE", __FILE__);
 define("MOMO_PATH", dirname(__FILE__));
 define("MOMO_ADMIN_PATH", MOMO_PATH.'/admin');
@@ -32,7 +33,8 @@ define('MOMO_THEME_PATH',get_theme_root().'/'.MOMO_MOBILE_THEME);
 
 define('MOMO_VERSION', '0.2');
 define("MOMO_REPORTING_ACTION", 'momo_reporting');
-define("MOMO_REPORTING_URL", 'http://www.jeremyhou.com/mobiah/posty-reporting.php');
+define("MOMO_REPORTING_FREQ", 'daily');
+define("MOMO_REPORTING_URL", 'http://mobiah.com/mobileposty/reporting.php');
 
 
 /*
