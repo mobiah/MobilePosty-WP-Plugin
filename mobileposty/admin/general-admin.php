@@ -193,7 +193,8 @@ function momo_envTester() {
 							url: ajaxurl, 
 							data: { "action" : 'momo_ajaxTest' },
 							complete: function ( reqObj, status ) {
-										if (status == 'success' && reqObj.responseText == 'true'){
+										var s = reqObj.responseText.replace(/\s/,'');
+										if (status == 'success' && s == 'true'){
 											// it worked.  let's show that it worked.
 											jQuery('#momo_AJAXTest').addClass('momo_pass').html('...AJAX request submitted successfully.');
 											momo_AJAXTest = true;
